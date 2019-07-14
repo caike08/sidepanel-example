@@ -27,95 +27,108 @@
 </head>
 
 <body>
-  <div class="d-flex" id="wrapper">
-
+  <!-- Blank page -->
+  <div id="blankpage" class="main-overlay">
     <!-- Sidebar -->
-    <div class="bg-custom border-right" id="sidebar">
-      <div class="list-group list-group-flush border-bottom margin-bottom">
-        <a href="#" class="list-group-item list-group-item-action bg-light">
-          <ion-icon name="pie"></ion-icon>
-          Overview
-        </a>
-        <a href="#" class="list-group-item list-group-item-action bg-light">
-          <ion-icon name="person"></ion-icon>
-          Social Profile
-          <span class="badge badge-success">1</span>
-        </a>
-        <a href="#" class="list-group-item list-group-item-action bg-light">
-          <ion-icon name="analytics"></ion-icon>
-          Hashtag
-        </a>
-        <a href="#" class="list-group-item list-group-item-action bg-light">
-          <ion-icon name="at"></ion-icon>
-          Mentions
-        </a>
-        <a href="#" class="list-group-item list-group-item-action bg-light">
-          <ion-icon name="leaf"></ion-icon>
-          Brands
-        </a>
-      </div>
-      <div class="list-group list-group-flush">
-        <a href="#" class="list-group-item list-group-item-action bg-light">
-          <ion-icon name="logo-buffer"></ion-icon>
-          Collections
-        </a>
-        <a href="#" class="list-group-item list-group-item-action bg-light">
-          <ion-icon name="list-box"></ion-icon>
-          Internal Notes
-        </a>
-      </div>
-    </div>
-
-    <main id="content-wrapper">
-      <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
-        <div class="row w-100">
-          <div class="col-md-12 col-lg-10 profile">
-            <div class="profile-picture">
-              <img src="./img/profile.jpg" alt="profile picture">
-            </div>
-
-            <div class="profile-details">
-              <div class="profile-name">
-                <p>Socialbakers Dog</p>
-                <span class="badge badge-secondary">Non-business</span>
-              </div>
-              <div class="profile-info">
-                <p>Male</p>
-                <span class="separator">|</span>
-                <p>4-7 years-old</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-12 col-lg-2 options">
-            <button type="button" id="menu">
-              <ion-icon name="menu"></ion-icon>
-            </button>
-            <button class="bookmark">
-            </button>
-            <button class="edit">
-            </button>
-          </div>
+    <div class="d-flex" id="wrapper">
+      <button class="dismiss-overlay">
+        X
+      </button>
+      <div class="bg-custom border-right" id="sidebar">
+        <div class="list-group list-group-flush border-bottom margin-bottom">
+          <a href="#" class="list-group-item list-group-item-action bg-light">
+            <ion-icon name="pie"></ion-icon>
+            Overview
+          </a>
+          <a href="#" class="list-group-item list-group-item-action bg-light">
+            <ion-icon name="person"></ion-icon>
+            Social Profile
+            <span class="badge badge-success">1</span>
+          </a>
+          <a href="#" class="list-group-item list-group-item-action bg-light">
+            <ion-icon name="analytics"></ion-icon>
+            Hashtag
+          </a>
+          <a href="#" class="list-group-item list-group-item-action bg-light">
+            <ion-icon name="at"></ion-icon>
+            Mentions
+          </a>
+          <a href="#" class="list-group-item list-group-item-action bg-light">
+            <ion-icon name="leaf"></ion-icon>
+            Brands
+          </a>
         </div>
-      </nav>
-
-      <div class="container-fluid">
-        <img src="./img/empty-img.svg" alt="empty">
-        <p>Dog does not have any mention.</p>
+        <div class="list-group list-group-flush">
+          <a href="#" class="list-group-item list-group-item-action bg-light">
+            <ion-icon name="logo-buffer"></ion-icon>
+            Collections
+          </a>
+          <a href="#" class="list-group-item list-group-item-action bg-light">
+            <ion-icon name="list-box"></ion-icon>
+            Internal Notes
+          </a>
+        </div>
       </div>
-    </main>
+
+      <main id="content-wrapper">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+          <div class="row w-100">
+            <div class="col-md-12 col-lg-10 profile">
+              <div class="profile-picture">
+                <img src="./img/profile.jpg" alt="profile picture">
+              </div>
+
+              <div class="profile-details">
+                <div class="profile-name">
+                  <p>Socialbakers Dog</p>
+                  <span class="badge badge-secondary">Non-business</span>
+                </div>
+                <div class="profile-info">
+                  <p>Male</p>
+                  <span class="separator">|</span>
+                  <p>4-7 years-old</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-12 col-lg-2 options">
+              <button type="button" id="menu">
+                <ion-icon name="menu"></ion-icon>
+              </button>
+              <button class="bookmark">
+              </button>
+              <button class="edit">
+              </button>
+            </div>
+          </div>
+        </nav>
+
+        <div class="container-fluid">
+          <img src="./img/empty-img.svg" alt="empty">
+          <p>Dog does not have any mention.</p>
+        </div>
+      </main>
+    </div>
   </div>
+
   <script>
     const button = document.querySelector('#menu');
     const sidebar = document.querySelector('#sidebar');
     const contentWrapper = document.querySelector('#content-wrapper');
+    const buttonOverlay = document.querySelector('.dismiss-overlay');
+    const blankpage = document.querySelector('#blankpage');
 
     button.onclick = () => {
       sidebar.classList.toggle('sidebar-opened');
-      contentWrapper.classList.toggle('overlay');
+      contentWrapper.classList.toggle('mobile-overlay');
+    }
+
+    buttonOverlay.onclick = () => {
+      blankpage.classList.remove('main-overlay');
     }
   </script>
+
   <!-- Grunt livereload -->
-  <!-- <script src="http://localhost:35729/livereload.js"></script> -->
+  <script src="http://localhost:35729/livereload.js"></script>
   <!-- Ionic Icons -->
   <script src="https://unpkg.com/ionicons@4.2.2/dist/ionicons.js"></script>
 </body>
