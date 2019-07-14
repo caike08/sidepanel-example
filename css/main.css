@@ -1,0 +1,155 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+body {
+  overflow-x: hidden; }
+
+.row {
+  margin: 0; }
+
+#sidebar {
+  min-height: 100vh;
+  margin-left: -15rem;
+  transition: margin 0.25s ease-out;
+  display: flex;
+  flex-direction: column; }
+  #sidebar .list-group {
+    width: 15rem; }
+    #sidebar .list-group .list-group-item {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start; }
+    #sidebar .list-group ion-icon {
+      margin: 0 5px 0 0; }
+    #sidebar .list-group .badge {
+      margin: 0 5px; }
+  #sidebar .margin-bottom {
+    display: flex;
+    margin-bottom: 5px; }
+
+.sidebar-opened {
+  margin-left: 0 !important; }
+
+.bg-custom {
+  color: #fff; }
+
+#content-wrapper {
+  min-width: 100vw;
+  display: flex;
+  position: relative;
+  flex-direction: column; }
+
+.container-fluid {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  overflow: hidden; }
+  .container-fluid p {
+    margin-top: 5px; }
+
+.navbar .profile {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 0; }
+  .navbar .profile .profile-picture {
+    width: 100%;
+    max-width: 60px;
+    height: 60px;
+    display: flex;
+    margin: auto;
+    border: 3px solid #fff;
+    background-color: #fff;
+    background-clip: padding-box;
+    overflow: hidden;
+    border-radius: 100%; }
+    .navbar .profile .profile-picture img {
+      display: flex;
+      min-width: 100%;
+      min-height: 100%;
+      padding: 2%;
+      border-radius: 100%; }
+  .navbar .profile .profile-details {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-left: 5px; }
+    .navbar .profile .profile-details .profile-name,
+    .navbar .profile .profile-details .profile-info {
+      display: inline-flex;
+      justify-items: flex-start;
+      align-items: center; }
+    .navbar .profile .profile-details .profile-name p {
+      margin: 2px 10px 2px 1px;
+      font-weight: bold;
+      font-size: 1rem; }
+    .navbar .profile .profile-details .profile-name .badge {
+      align-self: center;
+      display: flex;
+      font-size: 0.35rem; }
+    .navbar .profile .profile-details .profile-info p {
+      margin: 0;
+      font-size: 0.75rem; }
+    .navbar .profile .profile-details .separator {
+      display: flex;
+      margin: 0px 5px;
+      color: #ccc; }
+.navbar .options {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end; }
+  .navbar .options .bookmark,
+  .navbar .options .edit {
+    width: 30px;
+    height: 30px;
+    margin: 5px; }
+  .navbar .options .bookmark {
+    background: url("../img/bookmark-saved.svg") no-repeat;
+    background-size: 70%;
+    background-position: center; }
+  .navbar .options .edit {
+    background: url("../img/edit-gray.svg") no-repeat;
+    background-size: 70%;
+    background-position: center; }
+  .navbar .options #menu {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    margin-right: auto;
+    width: 30px;
+    height: 30px; }
+
+@media (min-width: 768px) {
+  #sidebar {
+    margin-left: 0; }
+
+  #content-wrapper {
+    min-width: 0;
+    width: 100%; }
+
+  .sidebar-opened {
+    margin-left: -15rem; }
+
+  .navbar .profile .profile-picture {
+    max-width: 100px;
+    height: 100px; }
+  .navbar .profile .profile-details .profile-name p {
+    font-size: 1.6rem; }
+  .navbar .profile .profile-details .profile-name .badge {
+    font-size: 0.75rem; }
+  .navbar .profile .profile-details .profile-info p {
+    font-size: 1rem; }
+  .navbar .profile .profile-details .profile-info .separator {
+    margin: 0px 15px; }
+  .navbar .options {
+    justify-content: center; }
+    .navbar .options #menu {
+      display: none; } }
+
+/*# sourceMappingURL=main.css.map */

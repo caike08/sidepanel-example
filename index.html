@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Side Panel example | Socialbakers</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Socialbakers">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="description" lang="en" content="">
+  <meta name="keywords" lang="en" content="socialbakers, sidepanel">
+  <meta name="robots" content="index, follow">
+  <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
+  <meta name="description" content="">
+  <!-- Bootstrap core CSS -->
+  <link href="css/bootstrap/bootstrap.min.css" rel="stylesheet">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.min.css">
+  <!--[if IE]>
+      <link href="https://cdn.jsdelivr.net/gh/coliff/bootstrap-ie8/css/bootstrap-ie9.min.css" rel="stylesheet">
+      <script src="https://cdn.jsdelivr.net/g/html5shiv@3.7.3"></script>
+      <![endif]-->
+  <!--[if lt IE 9]>
+      <link href="https://cdn.jsdelivr.net/gh/coliff/bootstrap-ie8/css/bootstrap-ie8.min.css" rel="stylesheet">
+      <![endif]-->
+</head>
+
+<body>
+  <div class="d-flex" id="wrapper">
+
+    <!-- Sidebar -->
+    <div class="bg-custom border-right" id="sidebar">
+      <div class="list-group list-group-flush border-bottom margin-bottom">
+        <a href="#" class="list-group-item list-group-item-action bg-light">
+          <ion-icon name="pie"></ion-icon>
+          Overview
+        </a>
+        <a href="#" class="list-group-item list-group-item-action bg-light">
+          <ion-icon name="person"></ion-icon>
+          Social Profile
+          <span class="badge badge-success">1</span>
+        </a>
+        <a href="#" class="list-group-item list-group-item-action bg-light">
+          <ion-icon name="analytics"></ion-icon>
+          Hashtag
+        </a>
+        <a href="#" class="list-group-item list-group-item-action bg-light">
+          <ion-icon name="at"></ion-icon>
+          Mentions
+        </a>
+        <a href="#" class="list-group-item list-group-item-action bg-light">
+          <ion-icon name="leaf"></ion-icon>
+          Brands
+        </a>
+      </div>
+      <div class="list-group list-group-flush">
+        <a href="#" class="list-group-item list-group-item-action bg-light">
+          <ion-icon name="logo-buffer"></ion-icon>
+          Collections
+        </a>
+        <a href="#" class="list-group-item list-group-item-action bg-light">
+          <ion-icon name="list-box"></ion-icon>
+          Internal Notes
+        </a>
+      </div>
+    </div>
+
+    <main id="content-wrapper">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+        <div class="row w-100">
+          <div class="col-md-12 col-lg-10 profile">
+            <div class="profile-picture">
+              <img src="./img/profile.jpg" alt="profile picture">
+            </div>
+
+            <div class="profile-details">
+              <div class="profile-name">
+                <p>Socialbakers Dog</p>
+                <span class="badge badge-secondary">Non-business</span>
+              </div>
+              <div class="profile-info">
+                <p>Male</p>
+                <span class="separator">|</span>
+                <p>4-7 years-old</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-12 col-lg-2 options">
+            <button type="button" id="menu">
+              <ion-icon name="menu"></ion-icon>
+            </button>
+            <button class="bookmark">
+            </button>
+            <button class="edit">
+            </button>
+          </div>
+        </div>
+      </nav>
+
+      <div class="container-fluid">
+        <img src="./img/empty-img.svg" alt="empty">
+        <p>Dog does not have any mention.</p>
+      </div>
+    </main>
+  </div>
+  <script>
+    const button = document.querySelector('#menu');
+    const sidebar = document.querySelector('#sidebar');
+
+    button.onclick = () => {
+      sidebar.classList.toggle('sidebar-opened')
+    }
+  </script>
+  <script src="http://localhost:35729/livereload.js"></script>
+  <!-- Ionic Icons -->
+  <script src="https://unpkg.com/ionicons@4.2.2/dist/ionicons.js"></script>
+</body>
+
+</html>
