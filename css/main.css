@@ -8,6 +8,19 @@ body {
 .row {
   margin: 0; }
 
+.overlay {
+  z-index: 10;
+  background-color: rgba(0, 0, 0, 0.5); }
+  .overlay nav {
+    background-color: transparent !important;
+    border-bottom: transparent !important; }
+    .overlay nav > * {
+      background: transparent;
+      opacity: 0.5; }
+  .overlay .container-fluid {
+    background: transparent;
+    opacity: 0.5; }
+
 #sidebar {
   min-height: 100vh;
   margin-left: -15rem;
